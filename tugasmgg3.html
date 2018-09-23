@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Membuat Animasi Menggunakan JQuery
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideToggle("slow");
+			});
+
+			var div= $("#web");
+			div.animate({left: '100px'},"slow");
+			div.animate({fontSize: '2em'}, "slow");
+
+			$("h5").show();
+			$("h5").animate({
+				left: '100px'
+			});
+
+			$("#btn11").click(function(){
+				alert("Selamat Datang "+ $("#form1").val());
+			});
+
+			$("#btn12").click(function(){
+				$("#lawas").attr("src", "you.png");
+			});
+			$("#btn13").click(function(){
+				$("#lawas2").attr("src", "are.png");
+			});
+
+			$("#btn14").click(function(){
+				$("#lawas3").attr("src", "awesome.png");
+			});
+
+			$("#myInput").on("keyup", function(){
+				var value = $(this).val().toLowerCase();
+				$("#myTable tr").filter(function(){
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+
+	</script>
+	<style type="text/css">
+		body{
+			background-color: #42a6bf;
+		}
+		.font{
+			font-family: segoe ui;
+			color: white;
+		}
+
+		#panel{
+			display: none;
+			position: absolute;
+			bottom: 77%;
+
+		}
+		#div2{
+			position: absolute;
+			bottom: 55%;
+			right: 78%;
+		}
+		#form1{
+			border: 3px;
+			background-color: white;
+			width: 200px;
+			height: 25px;
+		}
+		.btn1{
+			background-color: black;
+			width: 100px;
+			height: 50px;
+			border:3px black;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+		}
+		#div3{
+			position: absolute;
+			bottom: 55%;
+			right: 65%;
+		}
+		#div4{
+			position: absolute;
+			bottom: 55%;
+			right: 50%;
+		}
+		#div5{
+			position: absolute;
+			bottom: 55%;
+			right: 35%;
+		}
+		#div6{
+			position: absolute;
+			bottom: 10%;
+			right: 65%;
+			
+		}
+		table {
+    		font-family: arial, sans-serif;
+    		border-collapse: collapse;
+   			width: 100%;
+		}
+
+		td{
+    		border: 1px solid #dddddd;
+    		background-color: white;
+    		text-align: left;
+    		padding: 8px;
+		}
+		th{
+			border: 1px solid #dddddd;
+    		background-color: white;
+    		text-align: center;
+    		padding: 8px;
+		}
+
+		tr:nth-child(even) {
+    		background-color: #dddddd;
+		}
+	</style>
+	
+</head>
+<body >
+	<div id= "web" class="font"style="position:absolute"><h3>TUGAS PEMROGRAMAN WEB</h3></div>
+	<br><br>
+	<!--  <div id="flip" ><b>Dibuat Oleh (klik me!)</b> </div> -->
+	<h5 id="panel" class="font">Nama : Tria Nur Aisyah Amini
+		<br>NRP : 05111740000092</h5>
+		<br>
+	<div id="div2" class="font">
+		<p><b>Pertama-tama masukkan namamu disini</b><br><br>
+		<input id="form1" type="text" placeholder="Ketik Disini"></p>
+		<button class="font btn1" id="btn11" >Click Me</button>
+	</div>
+
+	<div id="div3"><img src="klik.png" alt="sponge" id="lawas"><br>
+		<button class="font btn1" id="btn12">Cick Me</button></div>
+
+	<div id="div4"><img src="klik.png" alt="sponge" id="lawas2"><br>
+		<button class="font btn1" id="btn13">Cick Me</button></div>
+
+	<div id="div5"><img src="klik.png" alt="sponge" id="lawas3"><br>
+		<button class="font btn1" id="btn14">Cick Me</button></div>
+
+	<div id="div6">
+		<p class="font"><b>DATA MAHASISWA PEMROGRAMAN WEB B</b></p>
+		<table>
+			<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>NRP</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
+
+    <tr>
+      <td>Tria Nur Aisyah</td>
+      <td>05111340000092</td>
+      <td>john@example.com</td>
+    </tr>
+
+	<tr>
+      <td>Bintang Nuralamsyah</td>
+      <td>05111740000002</td>
+      <td>a_r@test.com</td>
+    </tr>
+
+    <tr>
+      <td>Mochammad Thiesa</td>
+      <td>05111740000194</td>
+      <td>mary@mail.com</td>
+    </tr>
+
+    <tr>
+      <td>Ahmad Naufal</td>
+      <td>05111740000138</td>
+      <td>july@greatstuff.com</td>
+    </tr>
+
+    <tr>
+      <td>Alifiannisa Alyahasna</td>
+      <td>05111740000011</td>
+      <td>haha@test.com</td>
+    </tr>
+
+    <tr>
+      <td>Atika Rizki N</td>
+      <td>05111740000015</td>
+      <td>lala@haha.com</td>
+    </tr>
+
+  </tbody>
+</table>
+		</table>
+	</div>
+
+</body>
+</html>
